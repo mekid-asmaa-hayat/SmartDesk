@@ -1,0 +1,56 @@
+<mat-sidenav-container class="shell">
+  <mat-sidenav mode="side" opened class="shell__sidenav">
+    <div class="brand">
+      <div class="brand__logo">SD</div>
+      <div>
+        <div class="brand__title">SmartDesk</div>
+        <div class="brand__subtitle">Support workspace</div>
+      </div>
+    </div>
+
+    <mat-nav-list>
+      @for (item of navigation(); track item.route) {
+        <a
+          mat-list-item
+          [routerLink]="item.route"
+          routerLinkActive="active-link"
+          [routerLinkActiveOptions]="{ exact: item.route === '/dashboard' }"
+        >
+          <mat-icon matListItemIcon>{{ item.icon }}</mat-icon>
+          <span matListItemTitle>{{ item.label }}</span>
+        </a>
+      }
+    </mat-nav-list>
+  </mat-sidenav>
+
+  <mat-sidenav-content>
+    <mat-toolbar class="topbar">
+      <span class="topbar__title">Angular Ticketing Starter</span>
+      <span class="toolbar-spacer"></span>
+
+      <button mat-icon-button [matMenuTriggerFor]="accountMenu" aria-label="Open account menu">
+        <mat-icon>account_circle</mat-icon>
+      </button>
+
+      <mat-menu #accountMenu="matMenu">
+        <div class="menu-user">
+          <div class="menu-user__name">{{ currentUser()?.name }}</div>
+          <div class="menu-user__role">{{ currentUser()?.role | titlecase }}</div>
+        </div>
+        <mat-divider></mat-divider>
+        <button mat-menu-item routerLink="/profile">
+          <mat-icon>person</mat-icon>
+          <span>Profile</span>
+        </button>
+        <button mat-menu-item (click)="logout()">
+          <mat-icon>logout</mat-icon>
+          <span>Logout</span>
+        </button>
+      </mat-menu>
+    </mat-toolbar>
+
+    <main class="content">
+      <router-outlet></router-outlet>
+    </main>
+  </mat-sidenav-content>
+</mat-sidenav-container>

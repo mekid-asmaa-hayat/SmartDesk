@@ -1,0 +1,34 @@
+<div class="page-header">
+  <div>
+    <div class="page-title">Admin settings</div>
+    <p class="page-subtitle">Visible only to admins through a dedicated route guard.</p>
+  </div>
+</div>
+
+<mat-card class="surface-card">
+  <form [formGroup]="form" (ngSubmit)="save()" class="form-grid">
+    <mat-form-field appearance="outline">
+      <mat-label>Workspace name</mat-label>
+      <input matInput formControlName="workspaceName" />
+    </mat-form-field>
+
+    <mat-form-field appearance="outline">
+      <mat-label>Default assignee</mat-label>
+      <input matInput formControlName="defaultAssignee" />
+    </mat-form-field>
+
+    <mat-form-field appearance="outline">
+      <mat-label>Support email</mat-label>
+      <input matInput formControlName="supportEmail" />
+    </mat-form-field>
+
+    <div class="settings-toggle">
+      <mat-slide-toggle formControlName="notifyOnHighPriority">Notify on high priority</mat-slide-toggle>
+      <mat-slide-toggle formControlName="enableWeeklySummary">Enable weekly summary</mat-slide-toggle>
+    </div>
+
+    <div>
+      <button mat-flat-button type="submit">Save settings</button>
+    </div>
+  </form>
+</mat-card>

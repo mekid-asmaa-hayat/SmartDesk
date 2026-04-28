@@ -1,0 +1,95 @@
+.dashboard-grid {
+  margin-bottom: 1.5rem;
+}
+
+.stat-card mat-card-content {
+  display: grid;
+  gap: 0.75rem;
+  padding: 1.25rem;
+}
+
+.stat-card__icon {
+  width: 48px;
+  height: 48px;
+  display: grid;
+  place-items: center;
+  border-radius: 16px;
+  background: #eef2ff;
+  color: #4338ca;
+}
+
+.stat-card__value {
+  font-size: 2rem;
+  font-weight: 800;
+}
+
+.stat-card__label {
+  color: var(--muted);
+}
+
+.dashboard-sections {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr;
+  gap: 1rem;
+}
+
+.section-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.ticket-list,
+.team-list {
+  display: grid;
+  gap: 0.85rem;
+}
+
+.ticket-row,
+.team-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  align-items: center;
+  padding: 1rem;
+  border-radius: 18px;
+  border: 1px solid var(--border);
+  background: var(--surface-soft);
+}
+
+.ticket-row__title {
+  font-weight: 700;
+}
+
+.ticket-row__meta {
+  display: grid;
+  gap: 0.45rem;
+  justify-items: end;
+}
+
+.avatar {
+  width: 42px;
+  height: 42px;
+  border-radius: 14px;
+  display: grid;
+  place-items: center;
+  background: #dbeafe;
+  color: #1d4ed8;
+  font-weight: 800;
+}
+
+.team-row {
+  justify-content: flex-start;
+}
+
+.team-row .badge {
+  margin-left: auto;
+}
+
+@media (max-width: 980px) {
+  .dashboard-sections {
+    grid-template-columns: 1fr;
+  }
+}

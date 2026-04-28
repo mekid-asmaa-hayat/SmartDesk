@@ -1,0 +1,37 @@
+<div class="page-header">
+  <div>
+    <div class="page-title">Users</div>
+    <p class="page-subtitle">Simple admin-style table to demonstrate Angular Material data layout.</p>
+  </div>
+</div>
+
+<mat-card class="surface-card users-card">
+  <table mat-table [dataSource]="users()" class="full-width">
+    <ng-container matColumnDef="name">
+      <th mat-header-cell *matHeaderCellDef>Name</th>
+      <td mat-cell *matCellDef="let user">{{ user.name }}</td>
+    </ng-container>
+
+    <ng-container matColumnDef="email">
+      <th mat-header-cell *matHeaderCellDef>Email</th>
+      <td mat-cell *matCellDef="let user">{{ user.email }}</td>
+    </ng-container>
+
+    <ng-container matColumnDef="department">
+      <th mat-header-cell *matHeaderCellDef>Department</th>
+      <td mat-cell *matCellDef="let user">{{ user.department }}</td>
+    </ng-container>
+
+    <ng-container matColumnDef="role">
+      <th mat-header-cell *matHeaderCellDef>Role</th>
+      <td mat-cell *matCellDef="let user">
+        <span class="badge" [class.badge--success]="user.role === 'admin'" [class.badge--neutral]="user.role !== 'admin'">
+          {{ user.role | titlecase }}
+        </span>
+      </td>
+    </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
+  </table>
+</mat-card>

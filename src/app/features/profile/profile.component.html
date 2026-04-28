@@ -1,0 +1,35 @@
+<div class="page-header">
+  <div>
+    <div class="page-title">Profile</div>
+    <p class="page-subtitle">Basic user profile page to show protected routes and user context.</p>
+  </div>
+</div>
+
+<mat-card class="surface-card profile-card">
+  <div class="profile-card__header">
+    <div class="profile-avatar">{{ currentUser()?.avatar }}</div>
+    <div>
+      <h2>{{ currentUser()?.name }}</h2>
+      <p class="muted">{{ currentUser()?.email }}</p>
+    </div>
+  </div>
+
+  <div class="profile-grid">
+    <div>
+      <strong>Role</strong>
+      <p>{{ currentUser()?.role }}</p>
+    </div>
+    <div>
+      <strong>Department</strong>
+      <p>{{ currentUser()?.department }}</p>
+    </div>
+    <div>
+      <strong>Status</strong>
+      <p>Active</p>
+    </div>
+    <div>
+      <strong>Workspace</strong>
+      <p>SmartDesk Demo</p>
+    </div>
+  </div>
+</mat-card>

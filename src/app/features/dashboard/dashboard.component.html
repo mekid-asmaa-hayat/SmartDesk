@@ -1,0 +1,66 @@
+<div class="page-header">
+  <div>
+    <div class="page-title">Dashboard</div>
+    <p class="page-subtitle">Track activity, support load, and current team distribution.</p>
+  </div>
+</div>
+
+<section class="card-grid dashboard-grid">
+  @for (stat of stats(); track stat.label) {
+    <mat-card class="metric-card stat-card">
+      <mat-card-content>
+        <div class="stat-card__icon">
+          <mat-icon>{{ stat.icon }}</mat-icon>
+        </div>
+        <div class="stat-card__value">{{ stat.value }}</div>
+        <div class="stat-card__label">{{ stat.label }}</div>
+      </mat-card-content>
+    </mat-card>
+  }
+</section>
+
+<section class="dashboard-sections">
+  <mat-card class="surface-card">
+    <div class="section-header">
+      <h3>Recent tickets</h3>
+      <span class="muted">Latest created items</span>
+    </div>
+
+    <div class="ticket-list">
+      @for (ticket of recentTickets(); track ticket.id) {
+        <article class="ticket-row">
+          <div>
+            <div class="ticket-row__title">{{ ticket.title }}</div>
+            <div class="muted">{{ ticket.category }} · {{ ticket.requester }}</div>
+          </div>
+          <div class="ticket-row__meta">
+            <span class="badge badge--neutral">{{ ticket.status | titlecase }}</span>
+            <span class="muted">{{ ticket.createdAt | date: 'MMM d, HH:mm' }}</span>
+          </div>
+        </article>
+      }
+    </div>
+  </mat-card>
+
+  <mat-card class="surface-card">
+    <div class="section-header">
+      <h3>Support team</h3>
+      <span class="muted">Current available users</span>
+    </div>
+
+    <div class="team-list">
+      @for (user of teamMembers(); track user.id) {
+        <article class="team-row">
+          <div class="avatar">{{ user.avatar }}</div>
+          <div>
+            <div class="ticket-row__title">{{ user.name }}</div>
+            <div class="muted">{{ user.department }}</div>
+          </div>
+          <span class="badge" [class.badge--success]="user.role === 'admin'" [class.badge--neutral]="user.role !== 'admin'">
+            {{ user.role | titlecase }}
+          </span>
+        </article>
+      }
+    </div>
+  </mat-card>
+</section>

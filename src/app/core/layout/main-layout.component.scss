@@ -1,0 +1,89 @@
+.shell {
+  height: 100vh;
+}
+
+.shell__sidenav {
+  width: 280px;
+  border-right: 1px solid var(--border);
+  background: linear-gradient(180deg, #111827 0%, #18253f 100%);
+  color: white;
+  padding: 1rem;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+  margin-bottom: 1rem;
+  padding: 0.5rem;
+}
+
+.brand__logo {
+  width: 48px;
+  height: 48px;
+  border-radius: 16px;
+  display: grid;
+  place-items: center;
+  font-weight: 800;
+  background: linear-gradient(135deg, #6366f1, #8b5cf6);
+}
+
+.brand__title {
+  font-weight: 800;
+  font-size: 1.1rem;
+}
+
+.brand__subtitle {
+  font-size: 0.9rem;
+  color: #cbd5e1;
+}
+
+.topbar {
+  position: sticky;
+  top: 0;
+  z-index: 2;
+  background: rgba(255, 255, 255, 0.82);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--border);
+}
+
+.topbar__title {
+  font-weight: 700;
+  color: var(--text);
+}
+
+.content {
+  padding: 1.5rem;
+}
+
+.active-link {
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.menu-user {
+  padding: 0.75rem 1rem;
+}
+
+.menu-user__name {
+  font-weight: 700;
+}
+
+.menu-user__role {
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+:host ::ng-deep {
+  .shell__sidenav .mdc-list-item,
+  .shell__sidenav .mdc-list-item__primary-text,
+  .shell__sidenav .mat-icon {
+    color: white !important;
+  }
+}
+
+@media (max-width: 900px) {
+  .shell__sidenav {
+    width: 240px;
+  }
+}

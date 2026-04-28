@@ -1,0 +1,17 @@
+.tickets-toolbar,
+.tickets-table {
+  margin-bottom: 1rem;
+}
+
+.tickets-table {
+  overflow: auto;
+}
+
+.cell-title {
+  font-weight: 700;
+}
+
+.table-actions {
+  display: flex;
+  gap: 0.35rem;
+}

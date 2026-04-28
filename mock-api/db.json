@@ -1,0 +1,26 @@
+{
+  "tickets": [
+    {
+      "id": 1,
+      "title": "Cannot access VPN",
+      "description": "The VPN connection fails after MFA validation.",
+      "status": "open",
+      "priority": "high",
+      "category": "Infrastructure",
+      "assigneeId": 2,
+      "requester": "Sonia Martin",
+      "createdAt": "2026-04-20T09:00:00Z"
+    },
+    {
+      "id": 2,
+      "title": "Add export button on dashboard",
+      "description": "The support manager needs CSV export on the KPI page.",
+      "status": "in_progress",
+      "priority": "medium",
+      "category": "Product",
+      "assigneeId": 1,
+      "requester": "Omar Haddad",
+      "createdAt": "2026-04-19T14:30:00Z"
+    }
+  ]
+}
