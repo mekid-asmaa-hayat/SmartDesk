@@ -18,7 +18,7 @@ export class AdminSettingsComponent {
 
   readonly form = this.fb.nonNullable.group({
     workspaceName: ['SmartDesk'],
-    defaultAssignee: ['Yacine Benali'],
+    defaultAssignee: ['Antoine Chevalier'],
     supportEmail: ['support@smartdesk.dev'],
     notifyOnHighPriority: [true],
     enableWeeklySummary: [true]

@@ -6,7 +6,7 @@ export class UserService {
   private readonly usersState = signal<User[]>([
     {
       id: 1,
-      name: 'Nadia Rahal',
+      name: 'Mekid Asma Hayet',
       email: 'admin@smartdesk.dev',
       role: 'admin',
       department: 'IT Operations',
@@ -15,7 +15,7 @@ export class UserService {
     },
     {
       id: 2,
-      name: 'Yacine Benali',
+      name: 'Antoine Chevalier',
       email: 'agent@smartdesk.dev',
       role: 'agent',
       department: 'Support',
@@ -24,8 +24,8 @@ export class UserService {
     },
     {
       id: 3,
-      name: 'Leila Mansouri',
-      email: 'leila@smartdesk.dev',
+      name: 'Sophie Renault',
+      email: 'Sophie Renault@smartdesk.dev',
       role: 'agent',
       department: 'Applications',
       avatar: 'LM',

@@ -9,7 +9,7 @@ export class AuthService {
   private readonly demoUsers = signal<User[]>([
     {
       id: 1,
-      name: 'Nadia Rahal',
+      name: 'Mekid Asma Hayet',
       email: 'admin@smartdesk.dev',
       role: 'admin',
       department: 'IT Operations',
@@ -18,7 +18,7 @@ export class AuthService {
     },
     {
       id: 2,
-      name: 'Yacine Benali',
+      name: 'Antoine Chevalier',
       email: 'agent@smartdesk.dev',
       role: 'agent',
       department: 'Support',
