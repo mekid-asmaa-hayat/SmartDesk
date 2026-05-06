@@ -10,7 +10,7 @@ export class UserService {
       email: 'admin@smartdesk.dev',
       role: 'admin',
       department: 'IT Operations',
-      avatar: 'NR',
+      avatar: 'MA',
       password: 'admin123'
     },
     {
@@ -19,7 +19,7 @@ export class UserService {
       email: 'agent@smartdesk.dev',
       role: 'agent',
       department: 'Support',
-      avatar: 'YB',
+      avatar: 'AC',
       password: 'agent123'
     },
     {
@@ -28,7 +28,7 @@ export class UserService {
       email: 'Sophie Renault@smartdesk.dev',
       role: 'agent',
       department: 'Applications',
-      avatar: 'LM',
+      avatar: 'SR',
       password: 'demo123'
     }
   ]);

@@ -35,7 +35,7 @@ export class TicketDialogComponent implements OnInit {
   readonly statuses: TicketStatus[] = ['open', 'in_progress', 'resolved'];
   readonly priorities: TicketPriority[] = ['low', 'medium', 'high'];
 
-  form!: FormGroup; // ✅ IMPORTANT
+  form!: FormGroup; 
 
   constructor(@Inject(MAT_DIALOG_DATA) public readonly data: TicketDialogData) {}
 

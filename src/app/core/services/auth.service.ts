@@ -13,7 +13,7 @@ export class AuthService {
       email: 'admin@smartdesk.dev',
       role: 'admin',
       department: 'IT Operations',
-      avatar: 'NR',
+      avatar: 'MA',
       password: 'admin123'
     },
     {
@@ -22,7 +22,7 @@ export class AuthService {
       email: 'agent@smartdesk.dev',
       role: 'agent',
       department: 'Support',
-      avatar: 'YB',
+      avatar: 'AC',
       password: 'agent123'
     }
   ]);
