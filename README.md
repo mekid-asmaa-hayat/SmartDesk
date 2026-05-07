@@ -24,7 +24,7 @@
 
 ### 🔐 Login Page
 
-![Login Page](docs/screenshots/Login-Page.png)
+![Login Page](Screeshots/Login-Page.png)
 
 ### 📊 Dashboard — Admin View
 
