@@ -28,19 +28,19 @@
 
 ### 📊 Dashboard — Admin View
 
-![Admin Dashboard](Screenshots/Admin-Dashboard.png)
+![Admin Dashboard](Screeshots/Admin-Dashboard.png)
 
 ### 📊 Dashboard — Agent View
 
-![Dashboard Agents](Screenshots/Dashboard-Agents.png)
+![Dashboard Agents](Screeshots/Dashboard-Agents.png)
 
 ### 🎫 Tickets Management
 
-![Tickets Page](Screenshots/Tickets-Page.png)
+![Tickets Page](Screeshots/Tickets-Page.png)
 
 ### 👥 Users Administration
 
-![Users Page](Screenshots/Users-Page.png)
+![Users Page](Screeshots/Users-Page.png)
 
 </div>
 
